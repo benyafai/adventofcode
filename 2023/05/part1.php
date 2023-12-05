@@ -1,6 +1,6 @@
 <?php
 print("<pre>");
-$start = microtime(true);
+$startTime = microtime(true);
 $handle = fopen("./input.txt", "r");
 if ($handle) {
     while (($line = fgets($handle)) !== false) {
@@ -42,6 +42,6 @@ foreach ($seeds[0] as $seed) {
     echo "\r\n";
 }
 echo "Lowest location: " . min($locations) . "\r\n\r\n";
-echo "Time: " . (microtime(true) - $start) . " seconds"; 
+echo "Time: " . (microtime(true) - $startTime) . " seconds";
 // print_r($maps);
 exit();
